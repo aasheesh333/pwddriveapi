@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 // create express app
 const app = express();
 
-
+const port = process.env.PORT || 3000 ;
 
 
 // Configuring the database
@@ -41,6 +41,6 @@ app.get('/', (req, res) => {
 require('./app/routes/book.routes.js')(app);
 
 // listen for requests
-app.listen(3000, () => {
+app.listen(port, () => {
    console.log("Server is listening on port 3000");
 });
